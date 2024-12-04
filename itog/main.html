@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<style>
+			body {
+				font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+					Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+					sans-serif;
+				background-color: #252525;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				width: 100vw;
+				height: 100vh;
+				overflow-x: hidden;
+				overflow-y: auto;
+			}
+
+			.container {
+				width: 400px;
+				height: max-content;
+				background: #9869ff;
+				padding: 20px;
+				border-radius: 10px;
+				margin-bottom: 20px;
+			}
+
+			h1 {
+				font-size: 24px;
+				margin: 10px 0px;
+				text-align: center;
+			}
+
+			h2 {
+				font-size: 18px;
+				margin: 10px 0px;
+				display: flex;
+			}
+
+			input {
+				width: 380px;
+				padding: 10px;
+				border: none;
+				border-radius: 5px;
+			}
+			input::-webkit-outer-spin-button,
+			input::-webkit-inner-spin-button {
+				-webkit-appearance: none;
+			}
+
+			button {
+				width: 100%;
+				margin-top: 10px;
+				padding: 10px;
+				background: #5228a7;
+				color: white;
+				border: none;
+				border-radius: 5px;
+				cursor: pointer;
+			}
+
+			button:hover {
+				background: #7d47e9;
+			}
+
+			.result {
+				margin-top: 10px;
+				font-size: 18px;
+				font-weight: bold;
+				text-align: center;
+			}
+		</style>
+		<title>Итоговая работа</title>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Калькулятор<br />Индекса Массы Тела (BMI)</h1>
+			<div id="bmiForm">
+				<h2 for="weight">Вес (кг):</h2>
+				<input type="number" id="weightBmi" required />
+
+				<h2 for="height">Рост (cм):</h2>
+				<input type="number" step="0.01" id="heightBmi" required />
+
+				<button id="sbmButBmi" type="submit">Рассчитать BMI</button>
+			</div>
+			<div id="resultBmi" class="result"></div>
+		</div>
+		<script>
+			document.getElementById('sbmButBmi').onclick = () => {
+				const weight = parseFloat(document.getElementById('weightBmi').value)
+				const height = parseFloat(document.getElementById('heightBmi').value)
+
+				const bmi = weight / ((height / 100) * (height / 100))
+				let resultText
+
+				if (bmi <= 18.5) {
+					resultText = 'Дефицит массы тела'
+				} else if (bmi <= 25.0) {
+					resultText = 'Норма'
+				} else if (bmi <= 30.0) {
+					resultText = 'Избыточная масса тела'
+				} else if (bmi > 30) {
+					resultText = 'Ожирение'
+				} else {
+					resultText = 'Пожалуйста, введите данные'
+				}
+
+				document.getElementById('resultBmi').innerText = bmi
+					? `Ваш BMI: ${bmi.toFixed(2)} - ${resultText}`
+					: resultText
+			}
+		</script>
+		<div class="container">
+			<h1>Определение квартала года</h1>
+			<div id="monthForm">
+				<h2>Введите номер месяца (1-12):</h2>
+				<input type="number" id="month" min="1" max="12" required />
+				<button id="sbmBtnMonth" type="submit">Определить квартал</button>
+			</div>
+			<div id="resultMonth" class="result"></div>
+		</div>
+		<script>
+			document.getElementById('sbmBtnMonth').onclick = () => {
+				const month = parseInt(document.getElementById('month').value)
+				let quarter
+				let monthName
+
+				switch (month) {
+					case 1:
+						monthName = 'Январь'
+						quarter = 1
+						break
+					case 2:
+						monthName = 'Февраль'
+						quarter = 1
+						break
+					case 3:
+						monthName = 'Март'
+						quarter = 1
+						break
+					case 4:
+						monthName = 'Апрель'
+						quarter = 2
+						break
+					case 5:
+						monthName = 'Май'
+						quarter = 2
+						break
+					case 6:
+						monthName = 'Июнь'
+						quarter = 2
+						break
+					case 7:
+						monthName = 'Июль'
+						quarter = 3
+						break
+					case 8:
+						monthName = 'Август'
+						quarter = 3
+						break
+					case 9:
+						monthName = 'Сентябрь'
+						quarter = 3
+						break
+					case 10:
+						monthName = 'Октябрь'
+						quarter = 4
+						break
+					case 11:
+						monthName = 'Ноябрь'
+						quarter = 4
+						break
+					case 12:
+						monthName = 'Декабрь'
+						quarter = 4
+						break
+					default:
+						monthName = ''
+						quarter = null
+						break
+				}
+
+				if (quarter !== null) {
+					document.getElementById(
+						'resultMonth'
+					).innerText = `${monthName} - это ${quarter} квартал.`
+				} else {
+					document.getElementById('resultMonth').innerText =
+						'Пожалуйста, введите \nкорректный номер месяца.'
+				}
+			}
+		</script>
+		<div class="container">
+			<h1>Преобразователь<br />Фаренгейт в Цельсий</h1>
+			<div id="tempForm">
+				<h3>Введите температуру в Фаренгейтах:</h3>
+				<input type="number" id="fahrenheit" required />
+				<button id="sbmButC" type="submit">Преобразовать</button>
+			</div>
+			<div id="resultC" class="result"></div>
+		</div>
+		<script>
+			document.getElementById('sbmButC').onclick = () => {
+				const fahrenheit = parseFloat(
+					document.getElementById('fahrenheit').value
+				)
+				const celsius = (fahrenheit - 32) * (5 / 9)
+
+				if (fahrenheit) {
+					document.getElementById(
+						'resultC'
+					).innerText = `${fahrenheit}°F = ${celsius.toFixed(2)}°C`
+				} else {
+					document.getElementById('resultC').innerText =
+						'Пожалуйста, введите число'
+				}
+			}
+		</script>
+		<div class="container">
+			<h1>Определение дня недели</h1>
+			<div id="dateForm">
+				<h2>Введите дату:</h2>
+				<input type="date" id="date" placeholder="02/06/1940" required />
+				<button id="sbmBtnDate" type="submit">Определить день недели</button>
+			</div>
+			<div id="resultDate" class="result"></div>
+		</div>
+		<script>
+			document.getElementById('sbmBtnDate').onclick = () => {
+				const dateString = document.getElementById('date').value
+
+				const dateParts = dateString.split('-')
+				if (dateParts.length !== 3) {
+					document.getElementById('resultDate').innerText =
+						'Пожалуйста, введите корректную дату'
+					return
+				}
+
+				const year = parseInt(dateParts[0])
+				const month = parseInt(dateParts[1]) - 1
+				const day = parseInt(dateParts[2])
+
+				const date = new Date(year, month, day)
+
+				if (
+					date.getFullYear() !== year ||
+					date.getMonth() !== month ||
+					date.getDate() !== day
+				) {
+					document.getElementById('resultDate').innerText =
+						'Неверная дата. Пожалуйста, проверьте ввод.'
+					return
+				}
+
+				const daysOfWeek = [
+					'Воскресенье',
+					'Понедельник',
+					'Вторник',
+					'Среда',
+					'Четверг',
+					'Пятница',
+					'Суббота',
+				]
+
+				const dayOfWeek = daysOfWeek[date.getDay()]
+
+				document.getElementById('resultDate').innerText = `${dayOfWeek}`
+			}
+		</script>
+		<div class="container">
+			<h1>Узнать свой возраст в днях</h1>
+			<div id="ageForm">
+				<h2>Дата рождения:</h2>
+				<input type="date" id="yearAge" required />
+				<button id="sbmBtnAge" type="submit">Узнать возраст в днях</button>
+			</div>
+			<div id="resultAge" class="result"></div>
+		</div>
+		<script>
+			document.getElementById('sbmBtnAge').onclick = () => {
+				const dateString = document.getElementById('yearAge').value
+
+				const dateParts = dateString.split('-')
+				if (dateParts.length !== 3) {
+					document.getElementById('resultAge').innerText =
+						'Пожалуйста, введите корректную дату'
+					return
+				}
+
+				const year = parseInt(dateParts[0])
+				const month = parseInt(dateParts[1]) - 1
+				const day = parseInt(dateParts[2])
+
+				const birthDate = new Date(year, month, day)
+				const today = new Date()
+
+				if (birthDate > today) {
+					document.getElementById('resultAge').innerText =
+						'Дата рождения не может быть в будущем'
+					return
+				}
+
+				const ageInMilliseconds = today - birthDate
+				const ageInDays = Math.floor(ageInMilliseconds / (1000 * 60 * 60 * 24))
+
+				document.getElementById(
+					'resultAge'
+				).innerText = `Ваш возраст: ${ageInDays} дней`
+			}
+		</script>
+	</body>
+</html>
