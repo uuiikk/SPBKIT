@@ -1,0 +1,43 @@
+hr{
+	height: 10px;
+	background-color: #252525;
+	border: none;
+	border-radius: 10px;
+}
+#id_h1{
+	margin: 0px;
+	background-color: #25252525;
+	border-radius: 10px;
+	color: #252525;
+	font-size: 2rem;
+	font-weight: bold;
+	text-align: center;
+}
+#id_h1:hover {
+	color: red ;
+	font-size: 2.4rem;
+}
+#f1{
+	display: flex;
+	margin: 0px;
+	background-color: #25252525;
+	border-radius: 10px;
+	color: #252525;
+	font-size: 2rem;
+	font-weight: bold;
+	justify-content: center;
+}
+button {
+	margin: 10px;
+	padding: 10px;
+	width: 200px;
+	border: none;
+	font-size: 1.8rem;
+	font-weight: bold;
+	background-color: #fff;
+	border-radius: 10px;
+}
+button:hover {
+	background-color: #b9b9b9;
+
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Объектная модель документа</title>
+		<link rel="stylesheet" href="styles.css" />
+		<script src="date.js"></script>
+		<script src="newWindow.js"></script>
+		<script src="info.js"></script>
+		<script src="randomColor.js"></script>
+		<script src="image.js"></script>
+	</head>
+	<body>
+		<h1 id="id_h1">Обращение к объектам документа и браузера</h1>
+		<hr id="hr1" />
+		<img
+			id="im1"
+			src="https://avatars.mds.yandex.net/i?id=ae37495d0d5cbe0ebb16885ae0765402_l-3793502-images-thumbs&n=13"
+			width="500px"
+			height="500px"
+		/>
+		<img
+			id="im2"
+			src="https://avatars.mds.yandex.net/i?id=acecda8bf5d3b50c706a376748a8edaf370c23a1-8497033-images-thumbs&n=13"
+			width="400px"
+			height="500px"
+		/>
+		<h2 id="id_h2">Форма с кнопками</h2>
+		<link id="li" rel="stylesheet" href="" />
+		<div id="f1">
+			<button id="but1" onclick="myGetDate()">Даты</button>
+			<button id="but2" onclick="openNewWindow()">Новое окно</button>
+			<button id="but3" onclick="getInfo()">Страница</button>
+			<button id="but4" onclick="randomColor()">Линия</button>
+			<button id="but5" onclick="resizableImage()">Рисунок</button>
+		</div>
+	</body>
+</html>
