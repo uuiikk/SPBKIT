@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Animation</title>
+		<link rel="stylesheet" href="styles.css" />
+		<script src="transparency.js"></script>
+		<script src="horizontalMove.js"></script>
+		<script src="horizontalVerticalMove.js"></script>
+		<script src="moveTime.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Прозрачность</h1>
+			<div class="animation1" onclick="transparency()">
+				<img
+					id="car1"
+					src="https://avatars.mds.yandex.net/get-autoru-vos/6214394/19c26e1b07b84af20dcf35e7607ddd53/1200x900"
+				/>
+			</div>
+		</div>
+		<div class="container">
+			<h1>Движение по горизонтали</h1>
+			<div class="animation2" onclick="horizontalMove()">
+				<img
+					id="car2"
+					src="https://avatars.mds.yandex.net/get-autoru-vos/6214394/19c26e1b07b84af20dcf35e7607ddd53/1200x900"
+				/>
+			</div>
+		</div>
+		<div class="container">
+			<h1>Движение по горизонтали и вертикали</h1>
+			<div class="animation3" onclick="horizontalVerticalMove()">
+				<img
+					id="car3"
+					src="https://avatars.mds.yandex.net/get-autoru-vos/6214394/19c26e1b07b84af20dcf35e7607ddd53/1200x900"
+				/>
+			</div>
+		</div>
+		<div class="container">
+			<h1>Движение во времени</h1>
+			<div id='animation4' class="animation4" onclick="changeColor()"><div id='progress' class="progress" ></div>
+			</div>
+		</div>
+	</body>
+</html>

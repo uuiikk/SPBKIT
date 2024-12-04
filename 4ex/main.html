@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Arrays</title>
+		<link rel="stylesheet" href="styles.css" />
+		<script src="table.js"></script>
+        <script src="days.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<label>Практическая работа №5</label>
+			<hr />
+			<label>Обработка массива</label>
+			<label id="data">Исходные данные</label>
+			<div class="form">
+				<label>Количество значений в массиве </label>
+				<input id="quantityNumb" placeholder="Введите число" type="number" />
+				<label>Минимальное значение элементов</label>
+				<input id="minNumb" placeholder="Введите число" type="number" />
+				<label>Максимальное значение элементов</label>
+				<input id="maxNumb" placeholder="Введите число" type="number" />
+			</div>
+			<button onclick="generateRandomNumbers()">Вычислить</button>
+			<table id="myTable"></table>
+		</div>
+		<div class="container">
+			<label>У каждого дня недели свой цвет в Таиланде</label>
+			<input id="input_day" placeholder="Введите номер дня недели" type="number" />
+			<button onclick="getDay()">Вывести</button>
+            <label id="res_day"></label>
+		</div>
+	</body>
+</html>

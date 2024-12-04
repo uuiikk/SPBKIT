@@ -1,0 +1,86 @@
+* {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+		Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-weight: bold;
+}
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin: 0;
+	padding: 20px;
+	font-family: Arial, sans-serif;
+	overflow-x: hidden;
+}
+canvas {
+	border-radius: 10px;
+	box-sizing: border-box;
+	display: block;
+	margin-bottom: 20px;
+}
+#container {
+	width: 680px;
+	height: 680px;
+	background-color: #c1ddff;
+	border-radius: 24px;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+.container_button {
+	display: flex;
+	justify-content: center;
+	width: 680px;
+	height: max-content;
+	background-color: #c1ddff;
+	border-radius: 24px;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+button {
+	margin: 0 10px;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	background-color: #ee99ff;
+	&:hover {
+		background-color: #cf99ff;
+	}
+}
+.square {
+	position: absolute;
+}
+.circle {
+	position: absolute;
+	border-radius: 100%;
+}
+.star {
+	position: absolute;
+	-webkit-clip-path: polygon(
+		50% 0%,
+		66% 27%,
+		98% 35%,
+		76% 57%,
+		79% 91%,
+		50% 78%,
+		21% 91%,
+		24% 57%,
+		2% 35%,
+		32% 27%
+	);
+	clip-path: polygon(
+		50% 0%,
+		66% 27%,
+		98% 35%,
+		76% 57%,
+		79% 91%,
+		50% 78%,
+		21% 91%,
+		24% 57%,
+		2% 35%,
+		32% 27%
+	);
+}

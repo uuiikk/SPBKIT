@@ -1,0 +1,93 @@
+* {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+		Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-weight: bold;
+}
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin: 0;
+	padding: 20px;
+	font-family: Arial, sans-serif;
+	background-color: #000000;
+	overflow-x: hidden;
+}
+.container {
+	display: inline-flex;
+	flex-direction: column;
+	width: 100%;
+	height: max-content;
+	background-color: rgb(187, 113, 255);
+	border-radius: 24px;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+h1 {
+	width: 100%;
+	height: 40px;
+	color: #ffffff;
+	font-size: 32px;
+	text-align: center;
+	margin: 0 0 10px 0;
+}
+.animation1 {
+	display: flex;
+	cursor: pointer;
+	justify-content: center;
+	border: 2px solid #000000;
+	border-radius: 14px;
+}
+#car1 {
+	transform: scale(-1, 1);
+	width: 300px;
+	height: auto;
+}
+.animation2 {
+	position: relative;
+	cursor: pointer;
+	height: 226px;
+	overflow: hidden;
+	border: 2px solid #000000;
+	border-radius: 14px;
+}
+#car2 {
+	position: absolute;
+	transform: scale(-1, 1);
+	width: 300px;
+	height: auto;
+	top: 0;
+	left: 0;
+}
+.animation3 {
+	position: relative;
+	cursor: pointer;
+	height: 260px;
+	overflow: hidden;
+	border: 2px solid #000000;
+	border-radius: 14px;
+}
+#car3 {
+	position: absolute;
+	transform: scale(-1, 1);
+	width: 300px;
+	height: auto;
+	top: 0;
+	left: 0;
+}
+.animation4 {
+	cursor: pointer;
+	height: 200px;
+	overflow: hidden;
+	border: 2px solid #000000;
+	border-radius: 14px;
+}
+.progress {
+	width: 0%;
+	height: 100%;
+	position: relative;
+	top: 0;
+	left: 0;
+	transition: background-color 0.2s linear;
+}
