@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles.css" />
+		<script src="hello.js"></script>
+		<script src="mul.js"></script>
+		<script src="rgb.js"></script>
+		<script src="avg.js"></script>
+		<script src="operation.js"></script>
+		<script src="table.js"></script>
+		<title>Function</title>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Function Hello</h1>
+			<input id="input_name" placeholder="Введите имя" type="text" />
+			<button onclick="hello()">Поздороваться!</button>
+			<label id="res_name"></label>
+		</div>
+		<div class="container">
+			<h1>Function mul(n,m)</h1>
+			<input id="input_n" placeholder="Введите число N" type="number" />
+			<input id="input_m" placeholder="Введите число M" type="number" />
+			<button onclick="mul()">Посчитать произведение</button>
+			<label id="res_mul"></label>
+		</div>
+		<div class="container">
+			<h1>Function rgb()</h1>
+			<input id="input_r" placeholder="Введите число R" type="number" />
+			<input id="input_g" placeholder="Введите число G" type="number" />
+			<input id="input_b" placeholder="Введите число B" type="number" />
+			<button onclick="rgb()">Посчитать цвет</button>
+			<label id="res_rgb"></label>
+		</div>
+		<div class="container">
+			<h1>Function avg()</h1>
+			<input
+				id="input_numb"
+				placeholder="Введите числа через пробел"
+				type="text"
+			/>
+			<button onclick="avg()">Посчитать среднее значение</button>
+			<label id="res_avg"></label>
+		</div>
+		<div class="container">
+			<h1>Function operation(m,n,o)</h1>
+			<input id="input_oper_m" placeholder="Введите число M" type="number" />
+			<input id="input_oper_n" placeholder="Введите число N" type="number" />
+			<input id="input_oper_o" placeholder="Введите действие" type="text" />
+			<button onclick="operation()">Посчитать</button>
+			<label id="res_oper"></label>
+		</div>
+		<div class="container">
+			<h1>Таблица</h1>
+			<input
+				id="input_k"
+				placeholder="Введите число (2 <= K <=9)"
+				type="number"
+			/>
+			<button onclick="createTable()">Нарисовать таблицу</button>
+			<table id="myTable"></table>
+		</div>
+	</body>
+</html>
