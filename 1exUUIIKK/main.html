@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Циклы</title>
+		<link rel="stylesheet" href="styles.css" />
+		<script src="sum.js"></script>
+		<script src="table.js"></script>
+		<script src="guessNumber.js"></script>
+	</head>
+	<body>
+		<h1>Операторы цикла</h1>
+		<hr />
+		<div class="container" id="exampleOne">
+			<label class="title">Пример 1. Сумма ряда</label>
+			<input type="number" id="inputN" placeholder="Введите число N" />
+			<input type="number" id="inputM" placeholder="Введите число M" />
+			<button onclick="sumOfOddNumbers()">Посчитать сумму</button>
+			<label class="result">Сумма ряда:<span id="result"></span></label>
+		</div>
+		<hr />
+		<div class="container" id="exampleTwo">
+			<label class="title">Пример 2. Таблица умножения</label>
+			<table id="myTable"></table>
+		</div>
+		<hr />
+		<div class="container" id="exampleThree">
+			<div class="header">
+				<label class="title" id="changeColorTitle"
+					>Пример 3. Угадай число</label
+				>
+				<button class="clearButton" onclick="clearAll()">Очистить</button>
+			</div>
+			<div class="bodyContainer">
+				<div class="containerInputs">
+					<label class="title">Введите диапазон:</label>
+					<input type="number" id="inputFrom" placeholder="От" />
+					<input type="number" id="inputTo" placeholder="До" />
+					<button onclick="calcAttempts()">Рассчитать</button>
+				</div>
+				<hr />
+				<label class="result" id="countAttempts"
+					>Осталось попыток:<span id="count"></span
+				></label>
+				<label class="result" id="minMax"
+					>Загаданное число:<span id="resultMinMax"></span
+				></label>
+				<input
+					type="number"
+					id="inputAttempt"
+					placeholder="Введите число"
+					onclick="myOnChange()"
+				/>
+				<button onclick="checkAttempt()">Проверить</button>
+			</div>
+		</div>
+	</body>
+</html>
